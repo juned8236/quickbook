@@ -21,5 +21,7 @@ from django.views.generic.base import RedirectView
 urlpatterns = [
     url(r'^$', RedirectView.as_view(pattern_name='sampleAppOAuth2:index')),
     url(r'^(?i)sampleAppOAuth2/', include('sampleAppOAuth2.urls', namespace='sampleAppOAuth2')),
+    url(r'^(?i)invoiceUsingDict', include('SampleInvoiceCRUDUsingDict.urls')),
+
     url(r'^(?i)admin/', admin.site.urls),
 ]

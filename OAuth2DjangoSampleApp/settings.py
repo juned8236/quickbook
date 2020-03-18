@@ -28,7 +28,7 @@ DEBUG = True
 SESSION_SAVE_EVERY_REQUEST = True
 
 ALLOWED_HOSTS = [
-    'localhost'
+    'localhost','127.0.0.1'
 ]
 
 # Application definition
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'requests'
+    'requests',
+    'SampleInvoiceCRUDUsingDict'
 ]
 
 MIDDLEWARE = [
@@ -126,12 +127,17 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
 
 # OAuth specific variables
 DISCOVERY_DOCUMENT = 'https://developer.api.intuit.com/.well-known/openid_sandbox_configuration/'
-CLIENT_ID = '<EnterYourAppClientID>'
-CLIENT_SECRET = '<EnterYourAppClientSecret>'
-REDIRECT_URI = 'http://localhost:8000/sampleappoauth2/authCodeHandler'
+CLIENT_ID = 'ABFYBN0R1fNfq90S9Z24N0QIvMhmn5JNNO8wKrmi28dC3HhRie'
+CLIENT_SECRET = 'A6ny4rkmSWNYe50wDrZdYOqontx0c2BUI1f2P9j1'
+REDIRECT_URI = 'https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl'
 ACCOUNTING_SCOPE = 'com.intuit.quickbooks.accounting'
 OPENID_SCOPES = ['openid', 'profile', 'email', 'phone', 'address']
 GET_APP_SCOPES = ['com.intuit.quickbooks.accounting', 'openid', 'profile', 'email', 'phone', 'address']
 SANDBOX_QBO_BASEURL = 'https://sandbox-quickbooks.api.intuit.com'
 SANDBOX_PROFILE_URL = 'https://sandbox-accounts.platform.intuit.com/v1/openid_connect/userinfo'
 ID_TOKEN_ISSUER = 'https://oauth.platform.intuit.com/op/v1'
+realm_id = "193514846598994"
+
+oauth_flag = 2
+access_token_oauth2 = "eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..4BactPTdngukbyfuOMe6EA.y_WO_N1QOInR1S6mWv0lpwipDMWPSSMTKog9lxXksIOr_XKN1I6-iOHL6LB2YH73d55U-w52bKa6nfLw-eFNQMyRkbH4SFVjMZ2dO8zGtV0aSeRy58OCDmDDLJ55Uv8xfKifERGMhrFZ8YjChYKe59BOKEtYGezG_erxwFDMZoM-D8uliYDLGy8XbjZiTmthoJoE9I8D05UoEGrcFRax5bJb5a_znCDsW-iyJg0oU86hIR-IyJx_FXBvn79ovPNcmGQqU9oy-Wr2nWSH6n9bk8fF0sTgu1Okq6YPTmMcayCu0WBzVw_bwnr5Ip8Jf7ZNUCfBblgWDdLEpVeZxDWlF8YAXKVG21T4cd6zBBFM8zczqGwGeYxC9XZWbDZoklqokM3Qxm_zlNByexlevaBfK7igyiw4bCkQUNG5HtkMk5w_pMhKWWD0NhPZoa912mAkFkejYzgHwYLbmbTt7k_z0UXX8FYoH4GphNIZGZk-iCKokcDDffmHPUprDEAuiWAoZnY7bRfTi0ZzM13MEKI04yRP0HtjA1nXUpocj7gtzOHT-y4Z30KCJOY01D4Yo-tbiAsnk4zvtiXPyhUNWkzaxbiLamWOez7uYxYCXI-wUucgpPsJQtFFYE_cXY_QhcCvg3VQnqkqyQpxtS3zyrGCud6okFROMXEqIljlBn3I8kaCyU_xzHbN2RreKgp9HIOB65lX4xRVr8yVdQ8mCS8DYUIPXrxpvwsWQJg1-WXotfM.WSZwd0MJOrwbJMFlsM1bGQ"
+base_url = 'https://sandbox-quickbooks.api.intuit.com'
